@@ -57,53 +57,53 @@ nmap ,N :NERDTreeClose<CR>
 call plug#begin('~/.local/share/nvim/plugged')
 "	Plug 'tpope/vim-sensible'
   " Plug 'mhartington/oceanic-next'
-  Plug 'morhetz/gruvbox'
+  " Plug 'morhetz/gruvbox'
   Plug 'crusoexia/vim-monokai'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'kien/ctrlp.vim'
-    let g:ctrlp_map = '<c-p>'
-    let g:ctrlp_cmd = 'CtrlP'
+  " Plug 'kien/ctrlp.vim'
+  "   let g:ctrlp_map = '<c-p>'
+  "   let g:ctrlp_cmd = 'CtrlP'
   Plug 'sheerun/vim-polyglot' 
   " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'ts', 'tsx'] }
-  Plug 'mhartington/nvim-typescript'
-    let g:nvim_typescript#type_info_on_hold = 1
-  Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+  " Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'ts', 'tsx'] }
+  " Plug 'mhartington/nvim-typescript'
+    " let g:nvim_typescript#type_info_on_hold = 1
+  " Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
   "Plug 'wincent/command-t'
   " Plug 'othree/html5.vim'
   " Plug 'hail2u/vim-css3-syntax'
   Plug 'leshill/vim-json'
-  Plug 'ap/vim-css-color'
+  " Plug 'ap/vim-css-color'
   Plug 'airblade/vim-gitgutter'
   " Plug 'othree/javascript-libraries-syntax.vim'
   " let g:used_javascript_libs = 'react, vue, d3, chai, underscore'
-	Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-    let g:jsx_ext_required = 0
+	" Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+    " let g:jsx_ext_required = 0
 " Reason React 
   " Plug 'reasonml-editor/vim-reason-plus'
-	Plug 'mattn/emmet-vim'
-    let g:user_emmet_install_global = 0
-    autocmd FileType html,css,js,jsx,javascript,javascript.jsx EmmetInstall
-  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-    let g:javascript_plugin_flow = 1
+	" Plug 'mattn/emmet-vim'
+   "  let g:user_emmet_install_global = 0
+   "  autocmd FileType html,css,js,jsx,javascript,javascript.jsx EmmetInstall
+  " Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+    " let g:javascript_plugin_flow = 1
   Plug 'tpope/vim-fugitive'
-  Plug 'autozimu/LanguageClient-neovim', {'tag': 'binary-*-x86_64-apple-darwin'}
+  " Plug 'autozimu/LanguageClient-neovim', {'tag': 'binary-*-x86_64-apple-darwin'}
 
   " (Optional) Multi-entry selection UI.
-  Plug 'junegunn/fzf'
-	Plug 'w0rp/ale'
+  " Plug 'junegunn/fzf'
+	" Plug 'w0rp/ale'
 		" let g:ale_fixers = {'javascript': ['prettier_standard'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
 		" let g:ale_linters = {'javascript': ['standard']}
 		" let g:ale_fix_on_save = 1
-
-    let g:ale_fixers = { 'typescript': ['trim_whitespace', 'tslint', 'prettier'], 'javascript': ['eslint', 'prettier-eslint'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
-		let g:ale_linters = {'javascript': ['eslint', 'flow', 'trim_whitespace']}
-		let g:ale_fix_on_save = 0
-    let g:ale_completion_enabled = 1
-    let g:airline#extensions#ale#enabled = 1
-    nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-    nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" 
+"     let g:ale_fixers = { 'typescript': ['trim_whitespace', 'tslint', 'prettier'], 'javascript': ['eslint', 'prettier-eslint'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
+" 		let g:ale_linters = {'javascript': ['eslint', 'flow', 'trim_whitespace']}
+" 		let g:ale_fix_on_save = 0
+"     let g:ale_completion_enabled = 1
+"     let g:airline#extensions#ale#enabled = 1
+"     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+"     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 	Plug 'tpope/vim-surround'
 	" Plug 'whatyouhide/vim-gotham'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -138,69 +138,69 @@ set suffixesadd=.js,.jsx
 
 set showtabline=2 " always show tabs in gvim, but not vim
 " set up tab labels with tab number, buffer name, number of windows
-function! GuiTabLabel()
-  let label = ''
-  let bufnrlist = tabpagebuflist(v:lnum)
-  " Add '+' if one of the buffers in the tab page is modified
-  for bufnr in bufnrlist
-    if getbufvar(bufnr, "&modified")
-      let label = '+'
-      break
-    endif
-  endfor
-  " Append the tab number
-  let label .= v:lnum.': '
-  " Append the buffer name
-  let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
-  if name == ''
-    " give a name to no-name documents
-    if &buftype=='quickfix'
-      let name = '[Quickfix List]'
-    else
-      let name = '[No Name]'
-    endif
-  else
-    " get only the file name
-    let name = fnamemodify(name,":t")
-  endif
-  let label .= name
-  " Append the number of windows in the tab page
-  let wincount = tabpagewinnr(v:lnum, '$')
-  return label . '  [' . wincount . ']'
-endfunction
-set guitablabel=%{GuiTabLabel()}
+" function! GuiTabLabel()
+"   let label = ''
+"   let bufnrlist = tabpagebuflist(v:lnum)
+"   " Add '+' if one of the buffers in the tab page is modified
+"   for bufnr in bufnrlist
+"     if getbufvar(bufnr, "&modified")
+"       let label = '+'
+"       break
+"     endif
+"   endfor
+"   " Append the tab number
+"   let label .= v:lnum.': '
+"   " Append the buffer name
+"   let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+"   if name == ''
+"     " give a name to no-name documents
+"     if &buftype=='quickfix'
+"       let name = '[Quickfix List]'
+"     else
+"       let name = '[No Name]'
+"     endif
+"   else
+"     " get only the file name
+"     let name = fnamemodify(name,":t")
+"   endif
+"   let label .= name
+"   " Append the number of windows in the tab page
+"   let wincount = tabpagewinnr(v:lnum, '$')
+"   return label . '  [' . wincount . ']'
+" endfunction
+" set guitablabel=%{GuiTabLabel()}
 
 " set up tab tooltips with every buffer name
-function! GuiTabToolTip()
-  let tip = ''
-  let bufnrlist = tabpagebuflist(v:lnum)
-  for bufnr in bufnrlist
-    " separate buffer entries
-    if tip!=''
-      let tip .= " \n "
-    endif
-    " Add name of buffer
-    let name=bufname(bufnr)
-    if name == ''
-      " give a name to no name documents
-      if getbufvar(bufnr,'&buftype')=='quickfix'
-        let name = '[Quickfix List]'
-      else
-        let name = '[No Name]'
-      endif
-    endif
-    let tip.=name
-    " add modified/modifiable flags
-    if getbufvar(bufnr, "&modified")
-      let tip .= ' [+]'
-    endif
-    if getbufvar(bufnr, "&modifiable")==0
-      let tip .= ' [-]'
-    endif
-  endfor
-  return tip
-endfunction
-set guitabtooltip=%{GuiTabToolTip()}
+" function! GuiTabToolTip()
+"   let tip = ''
+"   let bufnrlist = tabpagebuflist(v:lnum)
+"   for bufnr in bufnrlist
+"     " separate buffer entries
+"     if tip!=''
+"       let tip .= " \n "
+"     endif
+"     " Add name of buffer
+"     let name=bufname(bufnr)
+"     if name == ''
+"       " give a name to no name documents
+"       if getbufvar(bufnr,'&buftype')=='quickfix'
+"         let name = '[Quickfix List]'
+"       else
+"         let name = '[No Name]'
+"       endif
+"     endif
+"     let tip.=name
+"     " add modified/modifiable flags
+"     if getbufvar(bufnr, "&modified")
+"       let tip .= ' [+]'
+"     endif
+"     if getbufvar(bufnr, "&modifiable")==0
+"       let tip .= ' [-]'
+"     endif
+"   endfor
+"   return tip
+" endfunction
+" set guitabtooltip=%{GuiTabToolTip()}
 
 function! LoadMainNodeModule(fname)
     let nodeModules = "./node_modules/"
@@ -289,37 +289,4 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis
                  \ | wincmd p | diffthis
 endif
-
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-" let s:opam_share_dir = system("opam config var share")
-" let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
-"
-"let s:opam_configuration = {}
-
-" function! OpamConfOcpIndent()
-" execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
-" endfunction
-" let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
-
-" function! OpamConfOcpIndex()
-  " execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
-" endfunction
-" " let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
-" 
-" function! OpamConfMerlin()
-  " let l:dir = s:opam_share_dir . "/merlin/vim"
-  " execute "set rtp+=" . l:dir
-" endfunction
-" let s:opam_configuration['merlin'] = function('OpamConfMerlin')
-" 
-" let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-" let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-" let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
-" for tool in s:opam_packages
-  " " Respect package order (merlin should be after ocp-index)
-  " if count(s:opam_available_tools, tool) > 0
-    " call s:opam_configuration[tool]()
-  " endif
-" endfor
-" " ## end of OPAM user-setup addition for vim / base ## keep this line
 " 

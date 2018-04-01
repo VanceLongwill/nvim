@@ -64,10 +64,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     let g:ctrlp_map = '<c-p>'
     let g:ctrlp_cmd = 'CtrlP'
   Plug 'sheerun/vim-polyglot' 
-  " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'ts', 'tsx'] }
-  Plug 'mhartington/nvim-typescript'
-    let g:nvim_typescript#type_info_on_hold = 1
+  Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
   "Plug 'wincent/command-t'
   " Plug 'othree/html5.vim'
@@ -96,9 +93,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 		" let g:ale_linters = {'javascript': ['standard']}
 		" let g:ale_fix_on_save = 1
 
-    let g:ale_fixers = { 'typescript': ['trim_whitespace', 'tslint', 'prettier'], 'javascript': ['eslint', 'prettier-eslint'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
+    let g:ale_fixers = {'javascript': ['eslint', 'prettier-eslint'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
 		let g:ale_linters = {'javascript': ['eslint', 'flow', 'trim_whitespace']}
-		let g:ale_fix_on_save = 0
+		let g:ale_fix_on_save = 1
     let g:ale_completion_enabled = 1
     let g:airline#extensions#ale#enabled = 1
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
