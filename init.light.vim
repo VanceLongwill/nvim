@@ -61,9 +61,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'crusoexia/vim-monokai'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  " Plug 'kien/ctrlp.vim'
-  "   let g:ctrlp_map = '<c-p>'
-  "   let g:ctrlp_cmd = 'CtrlP'
+  Plug 'kien/ctrlp.vim'
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_cmd = 'CtrlP'
   Plug 'sheerun/vim-polyglot' 
   " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
   " Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'ts', 'tsx'] }
@@ -120,6 +120,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
+set clipboard=unnamed
 " Required for operations modifying multiple buffers like rename.
 set hidden
 
