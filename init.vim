@@ -56,7 +56,7 @@ nmap ,n :NERDTreeFind<CR>
 nmap ,N :NERDTreeClose<CR>
 call plug#begin('~/.local/share/nvim/plugged')
 "	Plug 'tpope/vim-sensible'
-  " Plug 'mhartington/oceanic-next'
+  Plug 'mhartington/oceanic-next'
   Plug 'morhetz/gruvbox'
   Plug 'crusoexia/vim-monokai'
   Plug 'vim-airline/vim-airline'
@@ -220,9 +220,10 @@ set includeexpr=LoadMainNodeModule(v:fname)
 
 " Theme
 syntax on
-" colorscheme OceanicNext
-colorscheme monokai
+colorscheme OceanicNext
+" colorscheme monokai
 " colorscheme gruvbox
+" let g:airline_theme='molokai'
 let g:airline_theme='molokai'
 
 "Sort out tab for standard javascript
