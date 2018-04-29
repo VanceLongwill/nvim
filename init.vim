@@ -114,6 +114,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'mileszs/ack.vim'
     let g:ackprg = 'ag --vimgrep'
   Plug 'tpope/vim-rhubarb'
+  Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
 
 if (has("termguicolors"))
