@@ -96,6 +96,7 @@ call plug#begin('~/.local/share/nvim/plugged')
         \ }
 
   Plug 'editorconfig/editorconfig-vim'
+    let g:EditorConfig_exclude_patterns = ['fugitive://.*']
   " (Optional) Multi-entry selection UI.
   Plug 'junegunn/fzf'
 	Plug 'w0rp/ale'
