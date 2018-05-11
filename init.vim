@@ -69,6 +69,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'ts', 'tsx'] }
   Plug 'mhartington/nvim-typescript'
     let g:nvim_typescript#type_info_on_hold = 1
+    let g:nvim_typescript#signature_complete = 1
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
   "Plug 'wincent/command-t'
   " Plug 'othree/html5.vim'
@@ -88,8 +89,13 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
     let g:javascript_plugin_flow = 1
   Plug 'tpope/vim-fugitive'
-  Plug 'autozimu/LanguageClient-neovim', {'tag': 'binary-*-x86_64-apple-darwin'}
+  Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ 'tag': 'binary-*-x86_64-apple-darwin'
+        \ }
 
+  Plug 'editorconfig/editorconfig-vim'
   " (Optional) Multi-entry selection UI.
   Plug 'junegunn/fzf'
 	Plug 'w0rp/ale'
@@ -98,7 +104,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 		" let g:ale_fix_on_save = 1
 
     let g:ale_fixers = { 'typescript': ['trim_whitespace', 'tslint', 'prettier'], 'javascript': ['eslint', 'prettier-eslint'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
-		let g:ale_linters = {'javascript': ['eslint', 'flow', 'trim_whitespace']}
+		let g:ale_linters = {'javascript': ['eslint', 'tslint', 'trim_whitespace']}
 		let g:ale_fix_on_save = 0
     let g:ale_completion_enabled = 1
     let g:airline#extensions#ale#enabled = 1
@@ -234,6 +240,7 @@ set tabstop=2
 set shiftwidth=2
 " On pressing tab, insert 2 spaces
 set expandtab
+set clipboard=unnamed
 
 
 " Ignore some folders and files for CtrlP indexing
