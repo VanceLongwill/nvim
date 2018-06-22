@@ -39,13 +39,14 @@ augroup END
 "autocmd bufwritepost *.js *.jsx silent !standard --fix %
 "set autoread
 " REMAP jk TO CAPS LOCK
-imap jk <esc>
+imap jj <esc>
 " Move up and down in autocomplete with <c-j> and <c-k>
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+"
 " SET LEADER
 let g:mapleader = ","
 " let @" = expand("%")
@@ -66,8 +67,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     let g:ctrlp_cmd = 'CtrlP'
   Plug 'sheerun/vim-polyglot' 
   " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'ts', 'tsx'] }
-  Plug 'mhartington/nvim-typescript'
+  " Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'typescriptreact', 'ts', 'tsx', 'typescript.tsx'] }
+  " ts?
+  Plug 'mhartington/nvim-typescript', { 'do': 'bash install.sh', 'for': ['typescript', 'typescriptreact', 'ts', 'tsx', 'typescript.tsx'] }
     let g:nvim_typescript#type_info_on_hold = 1
     let g:nvim_typescript#signature_complete = 1
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
@@ -79,6 +81,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   " Plug 'othree/javascript-libraries-syntax.vim'
   " let g:used_javascript_libs = 'react, vue, d3, chai, underscore'
+  " ts?
 	Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
     let g:jsx_ext_required = 0
 " Reason React 
@@ -89,30 +92,44 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
     let g:javascript_plugin_flow = 1
   Plug 'tpope/vim-fugitive'
-  Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ 'tag': 'binary-*-x86_64-apple-darwin'
-        \ }
+    let g:fugitive_no_maps = 1
+  " ts?
+  " Plug 'autozimu/LanguageClient-neovim', {
+   "      \ 'branch': 'next',
+   "      \ 'do': 'bash install.sh',
+   "      \ 'tag': 'binary-*-x86_64-apple-darwin'
+   "      \ }
 
   Plug 'editorconfig/editorconfig-vim'
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
   " (Optional) Multi-entry selection UI.
   Plug 'junegunn/fzf'
+  " ts?
 	Plug 'w0rp/ale'
 		" let g:ale_fixers = {'javascript': ['prettier_standard'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
 		" let g:ale_linters = {'javascript': ['standard']}
 		" let g:ale_fix_on_save = 1
 
-    let g:ale_fixers = { 'typescript': ['trim_whitespace', 'tslint', 'prettier'], 'javascript': ['eslint', 'prettier-eslint'], 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']}
-		let g:ale_linters = {'javascript': ['eslint', 'tslint', 'trim_whitespace']}
-		let g:ale_fix_on_save = 0
-    let g:ale_completion_enabled = 1
-    let g:airline#extensions#ale#enabled = 1
-    nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+    let g:ale_fixers = { 
+      \'typescript': ['trim_whitespace', 'tslint', 'prettier'],
+      \'javascript': ['eslint', 'prettier-eslint'], 
+      \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier', 'tsserver'],
+      \'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'],
+    \}
+		let g:ale_linters = {
+      \'javascript': ['eslint', 'tslint', 'tsserver', 'trim_whitespace', 'typecheck'],
+    \'typescript': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier'], 
+    \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier']
+  \}
+  let g:ale_linter_aliases = {'jsx': 'css', 'tsx': 'css'}
+  let g:ale_fix_on_save = 0
+  let g:ale_completion_enabled = 1
+  let g:airline#extensions#ale#enabled = 1
+  nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 	Plug 'tpope/vim-surround'
 	" Plug 'whatyouhide/vim-gotham'
+  " ts?
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     let g:deoplete#enable_at_startup = 1
   " Plug 'flowtype/vim-flow'
@@ -120,8 +137,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   "Plug 'rust-lang/rust.vim'
   Plug 'mileszs/ack.vim'
     let g:ackprg = 'ag --vimgrep'
-  Plug 'tpope/vim-rhubarb'
   Plug 'Quramy/vim-js-pretty-template'
+  Plug 'Asheq/close-buffers.vim'
 call plug#end()
 
 if (has("termguicolors"))
@@ -142,7 +159,7 @@ set hidden
 " nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<cr>
 " nnoremap <silent> <cr> :call LanguageClient_textDocument_hover()<cr>
 set path=.,src
-set suffixesadd=.js,.jsx
+set suffixesadd=.js,.jsx,.tsx,.ts
 
 set showtabline=2 " always show tabs in gvim, but not vim
 " set up tab labels with tab number, buffer name, number of windows
