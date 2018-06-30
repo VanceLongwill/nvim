@@ -32,7 +32,7 @@ augroup numbertoggle
 augroup END
 "Prettier
 "<Ctrl-l> redraws the screen and removes any search highlighting.
-"remap <silent> <C-l> :nohl<CR><C-l>
+" imap <silent> <C-l> :noh<CR><C-l>
 " autocmd FileType javascript set formatprg=prettier\ --stdin
 "Format on save
 "autocmd BufWritePre *.js :normal gggqG
@@ -55,11 +55,28 @@ let g:mapleader = ","
 let NERDTreeShowHidden=1
 nmap ,n :NERDTreeFind<CR>
 nmap ,N :NERDTreeClose<CR>
+
+" Clear Highlighting
+nmap ,c :noh<CR>
+" Enable ALE
+nmap ,e :ALEEnable<CR>
+" Disable ALE
+nmap ,d :ALEDisable<CR>
+" Autofix
+nmap ,f :ALEFix<CR>
+" Lint
+nmap ,l :ALELint<CR>
+
+" Git status
+nmap ,gst :Gstatus<CR>
+" same bindings for merging diffs as in normal mode
+xnoremap dp :diffput<cr>
+xnoremap do :diffget<cr>
 call plug#begin('~/.local/share/nvim/plugged')
 "	Plug 'tpope/vim-sensible'
   Plug 'mhartington/oceanic-next'
-  Plug 'morhetz/gruvbox'
-  Plug 'crusoexia/vim-monokai'
+  " Plug 'morhetz/gruvbox'
+  " Plug 'crusoexia/vim-monokai'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'kien/ctrlp.vim'
@@ -126,7 +143,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   let g:ale_completion_enabled = 1
   let g:airline#extensions#ale#enabled = 1
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-    nmap <silent> <C-j> <Plug>(ale_next_wrap)
+  nmap <silent> <C-j> <Plug>(ale_next_wrap)
 	Plug 'tpope/vim-surround'
 	" Plug 'whatyouhide/vim-gotham'
   " ts?
@@ -169,7 +186,7 @@ function! GuiTabLabel()
   " Add '+' if one of the buffers in the tab page is modified
   for bufnr in bufnrlist
     if getbufvar(bufnr, "&modified")
-      let label = '+'
+      let label = '(M'
       break
     endif
   endfor
