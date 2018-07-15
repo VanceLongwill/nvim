@@ -66,9 +66,15 @@ nmap ,d :ALEDisable<CR>
 nmap ,f :ALEFix<CR>
 " Lint
 nmap ,l :ALELint<CR>
+" Go to definition in new tab
+nmap ,gd :ALEGoToDefinitionInTab<CR>
+nmap ,ts :TSDoc<CR>
 
 " Git status
 nmap ,gst :Gstatus<CR>
+" fuzzy find open buffers
+nmap ,bb :CtrlPBuffer<CR>
+" Git add :Gw
 " same bindings for merging diffs as in normal mode
 xnoremap dp :diffput<cr>
 xnoremap do :diffget<cr>
@@ -83,6 +89,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     let g:ctrlp_map = '<c-p>'
     let g:ctrlp_cmd = 'CtrlP'
   Plug 'sheerun/vim-polyglot' 
+  Plug 'raimondi/delimitmate'
   " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
   " Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'typescriptreact', 'ts', 'tsx', 'typescript.tsx'] }
   " ts?
@@ -142,6 +149,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   let g:ale_fix_on_save = 0
   let g:ale_completion_enabled = 1
   let g:airline#extensions#ale#enabled = 1
+  let g:airline#extensions#tabline#buffer_nr_show = 1
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
 	Plug 'tpope/vim-surround'
