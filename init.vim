@@ -376,3 +376,11 @@ endif
 " endfor
 " " ## end of OPAM user-setup addition for vim / base ## keep this line
 " 
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
