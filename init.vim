@@ -83,6 +83,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'mhartington/oceanic-next'
   " Plug 'morhetz/gruvbox'
   " Plug 'crusoexia/vim-monokai'
+  Plug 'janko-m/vim-test'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'kien/ctrlp.vim'
