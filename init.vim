@@ -24,3 +24,5 @@ source ~/.config/nvim/key-mappings/general.vim
 source ~/.config/nvim/key-mappings/git.vim
 source ~/.config/nvim/key-mappings/nerdtree.vim
 source ~/.config/nvim/key-mappings/ts.vim
+source ~/.config/nvim/key-mappings/languageclient.vim
+
