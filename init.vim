@@ -10,10 +10,12 @@ source ~/.config/nvim/settings/node-module-resolution.vim
 source ~/.config/nvim/plugins/plugins.vim
 source ~/.config/nvim/plugins/ctrlp.vim
 source ~/.config/nvim/plugins/nerdtree.vim
+source ~/.config/nvim/plugins/ale.vim
 
 " APPEARANCE
 source ~/.config/nvim/appearance/theme.vim 
-source ~/.config/nvim/appearance/theme.vim 
+source ~/.config/nvim/appearance/tabs.vim 
+source ~/.config/nvim/appearance/airline.vim 
 
 " KEYMAPPINGS
 source ~/.config/nvim/key-mappings/ale.vim

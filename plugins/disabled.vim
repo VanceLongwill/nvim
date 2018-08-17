@@ -17,3 +17,6 @@
   " Plug 'crusoexia/vim-monokai'
   "
 "	Plug 'tpope/vim-sensible'
+"
+" Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+    "let g:jsx_ext_required = 1 " disable for .js
