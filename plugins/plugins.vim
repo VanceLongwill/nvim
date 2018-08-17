@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   " Fuzzy file/buffer search
-  Plug 'kien/ctrlp.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   " Language support
   Plug 'sheerun/vim-polyglot' 
   " Bracket autocompletion
@@ -71,4 +71,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
   " FZF Unite all interfaces
   Plug 'Shougo/denite.nvim'
+  
+  " Better searching with regex
+  Plug 'haya14busa/incsearch.vim'
+  " Adds fuzzy search too
+  Plug 'haya14busa/incsearch-fuzzy.vim'
 call plug#end()
