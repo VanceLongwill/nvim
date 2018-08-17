@@ -1,0 +1,2 @@
+
+nmap ,ts :TSDoc<CR>

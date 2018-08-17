@@ -11,25 +11,9 @@ set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
 
 " VANCE's CONFIG
+source settings/relative-line-numbers.vim
+source appearance/theme.vim 
 
-" Line Numbers (show relative in current buffer, absolute when not, and
-" absolute on selected line)
-set number relativenumber
-
-"Colors
-set background=dark
-
-" VimR specific settings 
-"if has("gui_vimr")
-" Here goes some VimR specific settings like
-"  color xyz
-" endif
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
 "Prettier
 "<Ctrl-l> redraws the screen and removes any search highlighting.
 "remap <silent> <C-l> :nohl<CR><C-l>
