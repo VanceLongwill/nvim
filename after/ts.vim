@@ -1,14 +1,6 @@
-" Resolve something.(js|jsx)...
-set suffixesadd=.js,.jsx,.tsx,.ts
-
-" set runtimepath+=~/.config/nvim/after/ts.vim
-
-" Sort out tab for standard javascript
-" filetype plugin indent on
-
-
 " set filetypes as typescript.jsx
 " augroup filetypedetect
+"     autocmd!
 "     au BufRead,BufNewFile,BufReadPost *.tsx set filetype=typescript
 "     au BufRead,BufNewFile,BufReadPost *.tsx setlocal filetype=typescript
 "     au BufRead,BufNewFile,BufReadPost *.tsx set syntax=typescriptreact

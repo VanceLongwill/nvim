@@ -2,16 +2,17 @@
     let g:ale_fixers = { 
       \'typescript': ['trim_whitespace', 'tslint', 'prettier'],
       \'javascript': ['eslint', 'prettier-eslint'], 
-      \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier', 'tsserver'],
+      \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier'],
       \'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'],
     \}
 		let g:ale_linters = {
       \'javascript': ['eslint', 'tslint', 'tsserver', 'trim_whitespace', 'typecheck'],
-    \'typescript': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier'], 
-    \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier']
+      \'typescript': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier'], 
+      \'typescriptreact': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ]
   \}
-  " Hack
+  " Hack for CSS in JS
   let g:ale_linter_aliases = {'jsx': 'css', 'tsx': 'css'}
+  let g:ale_fixer_aliases = {'typescriptreact': 'typescript'}
   " Auto lint on save
   let g:ale_fix_on_save = 0
   " Disable lint-as-you-type

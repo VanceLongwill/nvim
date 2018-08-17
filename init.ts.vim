@@ -1,11 +1,5 @@
 " VANCE's CONFIG
 
-" SETTINGS
-source ~/.config/nvim/settings/relative-line-numbers.vim
-source ~/.config/nvim/settings/ts.vim
-source ~/.config/nvim/settings/general.vim
-source ~/.config/nvim/settings/node-module-resolution.vim
-
 " PLUGINS
 source ~/.config/nvim/plugins/plugins.vim
 source ~/.config/nvim/plugins/ctrlp.vim
@@ -27,3 +21,8 @@ source ~/.config/nvim/key-mappings/ts.vim
 source ~/.config/nvim/key-mappings/languageclient.vim
 source ~/.config/nvim/key-mappings/incsearch.vim
 
+" SETTINGS
+source ~/.config/nvim/settings/relative-line-numbers.vim
+source ~/.config/nvim/settings/general.vim
+source ~/.config/nvim/settings/node-module-resolution.vim
+source ~/.config/nvim/settings/ts.vim
