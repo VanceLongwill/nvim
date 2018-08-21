@@ -5,6 +5,7 @@ source ~/.config/nvim/plugins/plugins.vim
 source ~/.config/nvim/plugins/ctrlp.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/ale.vim
+source ~/.config/nvim/plugins/languageclient.vim
 
 " APPEARANCE
 source ~/.config/nvim/appearance/theme.vim 

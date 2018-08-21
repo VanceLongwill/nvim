@@ -15,9 +15,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Typescript syntax highlighting
   Plug 'HerringtonDarkholme/yats.vim'
   " Typescript IDE features
-  Plug 'mhartington/nvim-typescript', { 'do': './install.sh', 'for': ['typescript', 'typescriptreact', 'ts', 'tsx', 'typescript.tsx'] }
-    let g:nvim_typescript#type_info_on_hold = 1
-    let g:nvim_typescript#signature_complete = 1
+  " Plug 'mhartington/nvim-typescript', { 'do': './install.sh', 'for': ['typescript', 'typescriptreact', 'ts', 'tsx', 'typescript.tsx'] }
+    " let g:nvim_typescript#type_info_on_hold = 1
+    " let g:nvim_typescript#signature_complete = 1
   " Tern
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
   " JSON formatting
@@ -51,7 +51,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tpope/vim-surround'
   " Aync autocompletion
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    let g:deoplete#enable_at_startup = 1
+   let g:deoplete#enable_at_startup = 1
 
   " Nerdtree
   Plug 'scrooloose/nerdtree'
