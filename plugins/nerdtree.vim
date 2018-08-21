@@ -4,5 +4,5 @@
 
 augroup nerdtreestartup
   autocmd!
-  autocmd vimenter * NERDTreeCWD
+  autocmd vimenter * NERDTree | only
 augroup END
