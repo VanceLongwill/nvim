@@ -5,6 +5,6 @@ set number relativenumber
 
 augroup numbertoggle
   autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd BufEnter,FocusGained * set relativenumber
+  autocmd BufLeave,FocusLost * set norelativenumber
 augroup END
