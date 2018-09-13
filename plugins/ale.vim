@@ -4,6 +4,7 @@
       \'javascript': ['eslint', 'prettier-eslint'], 
       \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier'],
       \'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'],
+      \'cpp': ['clang-format'],
     \}
 		let g:ale_linters = {
       \'javascript': ['eslint', 'tslint', 'tsserver', 'trim_whitespace', 'typecheck'],

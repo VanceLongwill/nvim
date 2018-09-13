@@ -2,7 +2,7 @@
 " autocmd vimenter * NERDTree
 "
 
-augroup nerdtreestartup
-  autocmd!
-  autocmd vimenter * NERDTree | only
-augroup END
+" augroup nerdtreestartup
+"   autocmd!
+"   autocmd vimenter * NERDTree | only
+" augroup END
