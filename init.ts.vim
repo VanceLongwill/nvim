@@ -27,3 +27,4 @@ source ~/.config/nvim/settings/relative-line-numbers.vim
 source ~/.config/nvim/settings/general.vim
 source ~/.config/nvim/settings/node-module-resolution.vim
 source ~/.config/nvim/settings/ts.vim
+" source ~/.config/nvim/after/ts.vim

@@ -13,7 +13,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Bracket autocompletion
   Plug 'raimondi/delimitmate'
   " Typescript syntax highlighting
-  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript','typescript.tsx'] }
   " Typescript IDE features
   " Plug 'mhartington/nvim-typescript', { 'do': './install.sh', 'for': ['typescript', 'typescriptreact', 'ts', 'tsx', 'typescript.tsx'] }
     " let g:nvim_typescript#type_info_on_hold = 1
@@ -29,7 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Emmet
 	Plug 'mattn/emmet-vim'
     let g:user_emmet_install_global = 0
-    autocmd FileType html,css,js,jsx,javascript,javascript.jsx,tsx,typescript,typescriptreact,ts EmmetInstall
+    autocmd FileType html,css,js,jsx,javascript,javascript.jsx,tsx,typescript,typescript.tsx,ts EmmetInstall
     " Javascript syntax
   Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
     " let g:javascript_plugin_flow = 1

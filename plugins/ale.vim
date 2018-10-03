@@ -3,12 +3,15 @@
       \'typescript': ['trim_whitespace', 'tslint', 'prettier'],
       \'javascript': ['eslint', 'prettier-eslint'], 
       \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier'],
+      \'typescript.tsx': ['trim_whitespace', 'tslint', 'prettier'],
       \'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'],
       \'cpp': ['clang-format'],
+      \'python': ['yapf', 'autopep8'],
     \}
 		let g:ale_linters = {
       \'javascript': ['eslint', 'tslint', 'tsserver', 'trim_whitespace', 'typecheck'],
       \'typescript': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier'], 
+      \'typescript.tsx': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ],
       \'typescriptreact': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ]
   \}
   " Hack for CSS in JS

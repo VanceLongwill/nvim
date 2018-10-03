@@ -6,12 +6,12 @@ set suffixesadd=.js,.jsx,.tsx,.ts
 " Sort out tab for standard javascript
 " filetype plugin indent on
 
+augroup filetypedetect
+    " au BufRead,BufNewFile,BufReadPost *.tsx setlocal filetype=typescript
+    "
+    " Use typescript NOT typescript.tsx as syntax bc it's currently broken
+    au BufRead,BufNewFile,BufReadPost *.tsx setlocal syntax=typescript
 
-" set filetypes as typescript.jsx
-" augroup filetypedetect
-"     au BufRead,BufNewFile,BufReadPost *.tsx setlocal filetype=typescript
-"     au BufRead,BufNewFile,BufReadPost *.tsx setlocal syntax=typescriptreact
-" 
-"     au BufRead,BufNewFile,BufReadPost *.ts setlocal filetype=typescript
-"     au BufRead,BufNewFile,BufReadPost *.ts setlocal syntax=typescriptreact
-" augroup END
+    " au BufRead,BufNewFile,BufReadPost *.ts setlocal filetype=typescript
+    " au BufRead,BufNewFile,BufReadPost *.ts setlocal syntax=typescript
+augroup END
