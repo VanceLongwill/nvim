@@ -9,6 +9,8 @@ inoremap <expr> <c-k> ("\<C-p>")
 " Clear Highlighting
 nmap ,c :noh<CR>
 
+nmap .. :e.<CR>
+
 " Don't use Ex mode, use Q for formatting
 noremap Q gq
 
