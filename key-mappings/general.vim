@@ -32,3 +32,6 @@ nnoremap ¬ <C-w>l
 " Use alt + > / alt + < to increase/decrease window width
 nnoremap ≥ <C-w>>
 nnoremap ≤ <C-w><
+
+" Copy relative path to system clipboard
+nnoremap <leader>yp :let @+ = expand("%")<CR>
