@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
   " Colorscheme/theme
-  Plug 'mhartington/oceanic-next'
+  Plug 'morhetz/gruvbox'
+  " Plug 'mhartington/oceanic-next'
   " Run test for current file etc
   Plug 'janko-m/vim-test'
   " Airline
@@ -76,4 +77,5 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'haya14busa/incsearch.vim'
   " Adds fuzzy search too
   Plug 'haya14busa/incsearch-fuzzy.vim'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 call plug#end()

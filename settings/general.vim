@@ -39,6 +39,7 @@ autocmd FileType text setlocal textwidth=78
 
 augroup END
 
+autocmd FileType markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -47,6 +48,9 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis
                  \ | wincmd p | diffthis
 endif
+
+let g:python_host_prog = '/Users/vancelongwill/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/vancelongwill/.pyenv/versions/neovim3/bin/python'
 
 " Helps with hang on escape
 if ! has('gui_running')
