@@ -9,7 +9,7 @@
       \'python': ['yapf', 'autopep8'],
     \}
 		let g:ale_linters = {
-      \'javascript': ['eslint', 'tslint', 'tsserver', 'trim_whitespace', 'typecheck'],
+      \'javascript': ['eslint', 'flow', 'trim_whitespace', 'prettier'],
       \'typescript': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier'], 
       \'typescript.tsx': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ],
       \'typescriptreact': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ]
