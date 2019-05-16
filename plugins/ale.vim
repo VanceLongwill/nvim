@@ -1,7 +1,8 @@
 
     let g:ale_fixers = { 
       \'typescript': ['trim_whitespace', 'tslint', 'prettier'],
-      \'javascript': ['eslint', 'prettier-eslint'], 
+      \'javascript': ['eslint', 'prettier-eslint', 'prettier'], 
+      \'javascript.jsx': ['eslint', 'prettier-eslint', 'prettier'], 
       \'typescriptreact': ['trim_whitespace', 'tslint', 'prettier'],
       \'typescript.tsx': ['trim_whitespace', 'tslint', 'prettier'],
       \'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'],
@@ -10,6 +11,7 @@
     \}
 		let g:ale_linters = {
       \'javascript': ['eslint', 'flow', 'trim_whitespace', 'prettier'],
+      \'javascript.jsx': ['eslint', 'flow', 'trim_whitespace', 'prettier'],
       \'typescript': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier'], 
       \'typescript.tsx': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ],
       \'typescriptreact': ['trim_whitespace', 'tslint', 'tsserver', 'typecheck', 'prettier' ]

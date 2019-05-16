@@ -58,7 +58,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'scrooloose/nerdtree'
   " Silver searcher
   Plug 'mileszs/ack.vim'
-    let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep --ignore-dir=node_modules --ignore-dir=coverage --ignore-dir=flow-coverage'
   " Highlight template strings contents in other FileType syntax rule
   Plug 'Quramy/vim-js-pretty-template'
   " Clear up hidden buffers
