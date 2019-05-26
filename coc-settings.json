@@ -1,0 +1,22 @@
+{
+  // "list.source.files.command": "rg --files --vimgrep .",
+  "tsserver.enable": true,
+  "typescript.suggest.enabled": true,
+  "typescript.validate.enable": true,
+  "typescript.suggest.paths": true,
+  "typescript.referencesCodeLens.enable": true,
+  "git.enableGutters": true,
+  "list.normalMappings": {
+    "o": "action:open",
+    "t": "action:tabe",
+    "v": "action:vsplit",
+    "s": "action:split",
+    "d": "expr:GetDeleteAction"
+  },
+  "list.insertMappings": {
+    "<C-o>": "action:open",
+    "<C-t>": "action:tabe",
+    "<C-w>": "command:wincmd k"
+  }
+}
+

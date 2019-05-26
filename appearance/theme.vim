@@ -1,4 +1,3 @@
-" TODO: remove this  as theme overrides?
 set background=dark
 
 " VimR specific settings 
@@ -18,4 +17,4 @@ colorscheme OceanicNext
 " colorscheme monokai
 " colorscheme gruvbox
 " let g:airline_theme='molokai'
-" let g:airline_theme='OceanicNext'
+let g:airline_theme='OceanicNext'

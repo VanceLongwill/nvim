@@ -22,7 +22,7 @@
   " Disable lint-as-you-type
   let g:ale_lint_on_text_changed = 0
   " Use ALE for autocompletion too
-  let g:ale_completion_enabled = 1
+  let g:ale_completion_enabled = 0
 
   " let g:ale_typescript_tslint_config_path = 0
   "

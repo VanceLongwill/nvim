@@ -61,3 +61,6 @@ if ! has('gui_running')
         au InsertLeave * set timeoutlen=1000
     augroup END
 endif
+
+" Support for comments in jsonc files
+autocmd FileType json syntax match Comment +\/\/.\+$+

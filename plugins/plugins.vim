@@ -2,13 +2,15 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Colorscheme/theme
   " Plug 'morhetz/gruvbox'
   Plug 'mhartington/oceanic-next'
+  " Easy motion
+  Plug 'easymotion/vim-easymotion'
   " Run test for current file etc
   Plug 'janko-m/vim-test'
   " Airline
   Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  " Plug 'vim-airline/vim-airline-themes'
   " Fuzzy file/buffer search
-  Plug 'ctrlpvim/ctrlp.vim'
+  " Plug 'ctrlpvim/ctrlp.vim'
   " Language support
   Plug 'sheerun/vim-polyglot' 
   " Bracket autocompletion
@@ -21,16 +23,18 @@ call plug#begin('~/.local/share/nvim/plugged')
     " let g:nvim_typescript#signature_complete = 1
   " Tern
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+  " Intellisense + many extras
+  Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
   " JSON formatting
-  Plug 'leshill/vim-json'
+  " Plug 'leshill/vim-json'
   " Highlight color codes
   Plug 'ap/vim-css-color'
   " Left side gutter showing modified lines etc
-  Plug 'airblade/vim-gitgutter'
+  " Plug 'airblade/vim-gitgutter'
   " Emmet
-	Plug 'mattn/emmet-vim'
-    let g:user_emmet_install_global = 0
-    autocmd FileType html,css,js,jsx,javascript,javascript.jsx,tsx,typescript,typescript.tsx,ts EmmetInstall
+	" Plug 'mattn/emmet-vim'
+  "   let g:user_emmet_install_global = 0
+  "   autocmd FileType html,css,js,jsx,javascript,javascript.jsx,tsx,typescript,typescript.tsx,ts EmmetInstall
     " Javascript syntax
   Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
     " let g:javascript_plugin_flow = 1
@@ -43,16 +47,16 @@ call plug#begin('~/.local/share/nvim/plugged')
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
   " (Optional) Multi-entry selection UI.
   " Fuzzy finder dependency for LanguageClient-neovim
-  Plug 'junegunn/fzf'
+  " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
   " Linting
-	Plug 'w0rp/ale'
+	" Plug 'w0rp/ale'
   " Show errors
   " Manipulate brackets/tags/punctuation surrounding text
 	Plug 'tpope/vim-surround'
   " Aync autocompletion
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-   let g:deoplete#enable_at_startup = 1
+  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  "   let g:deoplete#enable_at_startup = 1
 
   " Nerdtree
   Plug 'scrooloose/nerdtree'
@@ -65,13 +69,13 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Asheq/close-buffers.vim'
 
   " LanguageClient (including tsserver)
-  Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+  " Plug 'autozimu/LanguageClient-neovim', {
+  "   \ 'branch': 'next',
+  "   \ 'do': 'bash install.sh',
+  "   \ }
 
   " FZF Unite all interfaces
-  Plug 'Shougo/denite.nvim'
+  " Plug 'Shougo/denite.nvim'
   
   " Better searching with regex
   Plug 'haya14busa/incsearch.vim'
