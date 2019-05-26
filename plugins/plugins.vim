@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
   " Colorscheme/theme
-  Plug 'morhetz/gruvbox'
-  " Plug 'mhartington/oceanic-next'
+  " Plug 'morhetz/gruvbox'
+  Plug 'mhartington/oceanic-next'
   " Run test for current file etc
   Plug 'janko-m/vim-test'
   " Airline

@@ -14,8 +14,8 @@ endif
 
 " Theme
 syntax on
-" colorscheme OceanicNext
+colorscheme OceanicNext
 " colorscheme monokai
-colorscheme gruvbox
+" colorscheme gruvbox
 " let g:airline_theme='molokai'
-let g:airline_theme='gruvbox'
+" let g:airline_theme='OceanicNext'
