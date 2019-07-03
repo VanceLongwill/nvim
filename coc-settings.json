@@ -1,9 +1,18 @@
 {
   // "list.source.files.command": "rg --files --vimgrep .",
   "tsserver.enable": true,
+  "tsserver.npm": "/usr/local/bin/npm",
   "typescript.suggest.enabled": true,
   "typescript.validate.enable": true,
   "typescript.suggest.paths": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+    "javascript.jsx"
+  ],
   "typescript.referencesCodeLens.enable": true,
   "git.enableGutters": true,
   "list.normalMappings": {
@@ -19,4 +28,3 @@
     "<C-w>": "command:wincmd k"
   }
 }
-
