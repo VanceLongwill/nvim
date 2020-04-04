@@ -1,3 +1,3 @@
 " Git status
-nmap ,gst :Gstatus<CR>
+nmap <leader>gst :Gstatus<CR>
 " Git add :Gw

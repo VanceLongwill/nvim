@@ -24,7 +24,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Tern
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
   " Intellisense + many extras
-  Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   " JSON formatting
   " Plug 'leshill/vim-json'
   " Highlight color codes
@@ -62,7 +62,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'scrooloose/nerdtree'
   " Silver searcher
   Plug 'mileszs/ack.vim'
-    let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'rg --vimgrep'
   " Highlight template strings contents in other FileType syntax rule
   Plug 'Quramy/vim-js-pretty-template'
   " Clear up hidden buffers
@@ -82,4 +82,5 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Adds fuzzy search too
   Plug 'haya14busa/incsearch-fuzzy.vim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()

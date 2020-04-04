@@ -1,9 +1,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
   " Colorscheme/theme
-  Plug 'morhetz/gruvbox'
+  Plug 'mhartington/oceanic-next'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " Left side gutter showing modified lines etc
   Plug 'airblade/vim-gitgutter'
+  " Easy motion
+  Plug 'easymotion/vim-easymotion'
   " Language support
   Plug 'sheerun/vim-polyglot' 
   Plug 'editorconfig/editorconfig-vim'
@@ -13,8 +15,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
    let g:deoplete#enable_at_startup = 1
-  Plug 'junegunn/fzf'
-  Plug 'Shougo/denite.nvim'
   " Better searching with regex
   Plug 'haya14busa/incsearch.vim'
   " Adds fuzzy search too

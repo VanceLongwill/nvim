@@ -9,7 +9,10 @@ inoremap <expr> <c-k> ("\<C-p>")
 " Clear Highlighting
 nmap ,c :noh<CR>
 
+" Open current working dir in nerdtree
 nmap .. :e.<CR>
+" Open parent dir of file in current buffer in nerdtree
+nmap § :e %:h<CR>
 
 " Don't use Ex mode, use Q for formatting
 noremap Q gq

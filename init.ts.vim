@@ -21,9 +21,9 @@ source ~/.config/nvim/plugins/airline.vim
 " source ~/.config/nvim/plugins/languageclient.vim
 
 " APPEARANCE
-source ~/.config/nvim/appearance/theme.vim 
-source ~/.config/nvim/appearance/tabs.vim 
-source ~/.config/nvim/appearance/airline.vim 
+source ~/.config/nvim/appearance/theme.vim
+source ~/.config/nvim/appearance/tabs.vim
+source ~/.config/nvim/appearance/airline.vim
 
 
 " SETTINGS
@@ -31,4 +31,4 @@ source ~/.config/nvim/settings/relative-line-numbers.vim
 source ~/.config/nvim/settings/general.vim
 source ~/.config/nvim/settings/node-module-resolution.vim
 source ~/.config/nvim/settings/ts.vim
-" source ~/.config/nvim/after/ts.vim
+source ~/.config/nvim/after/ts.vim
