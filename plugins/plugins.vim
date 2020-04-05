@@ -12,7 +12,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Fuzzy file/buffer search
   " Plug 'ctrlpvim/ctrlp.vim'
   " Language support
-  Plug 'sheerun/vim-polyglot' 
+  Plug 'sheerun/vim-polyglot'
   " Bracket autocompletion
   Plug 'raimondi/delimitmate'
   " Typescript syntax highlighting
@@ -53,7 +53,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Plug 'w0rp/ale'
   " Show errors
   " Manipulate brackets/tags/punctuation surrounding text
-	Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-surround'
   " Aync autocompletion
   " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   "   let g:deoplete#enable_at_startup = 1
@@ -76,7 +76,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
   " FZF Unite all interfaces
   " Plug 'Shougo/denite.nvim'
-  
   " Better searching with regex
   Plug 'haya14busa/incsearch.vim'
   " Adds fuzzy search too
