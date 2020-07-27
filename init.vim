@@ -527,6 +527,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 
 " code folding
 set foldmethod=syntax
+" open files expanded as default
+set nofoldenable
 
 " zo opens a fold at the cursor.
 " zShift+o opens all folds at the cursor.
@@ -537,4 +539,6 @@ set foldmethod=syntax
 " zShift+r decreases the foldlevel to zero -- all folds will be open.
 
 source ~/.config/nvim/coc.vim
+
+nmap ; :b 
 

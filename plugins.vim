@@ -25,10 +25,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'ntpeters/vim-better-whitespace'
 
 " auto-close plugin
-Plug 'rstacruz/vim-closer'
+" Plug 'rstacruz/vim-closer'
 
 " Improved motion in Vim
-" Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
 " Intellisense Engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -41,6 +41,10 @@ Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+Plug 'vancelongwill/import-sorter', { 'do': 'yarn install --frozen-lockfile' }
 
 " Denite - Fuzzy finding, buffer management
 " Plug 'Shougo/denite.nvim'
@@ -51,6 +55,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'Shougo/neosnippet'
 " Plug 'Shougo/neosnippet-snippets'
 
+" TOML syntax
+Plug 'cespare/vim-toml'
 
 " Bracket autocompletion
 Plug 'raimondi/delimitmate'
@@ -103,8 +109,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-Plug 'janko-m/vim-test'
-
 Plug 'ap/vim-css-color'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -116,6 +120,8 @@ Plug 'mileszs/ack.vim'
   let g:ackprg = 'rg --vimgrep'
 
 Plug 'vimwiki/vimwiki'
+
+Plug 'jremmen/vim-ripgrep'
 
 " Initialize plugin system
 call plug#end()
