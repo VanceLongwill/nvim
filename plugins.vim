@@ -121,7 +121,5 @@ Plug 'mileszs/ack.vim'
 
 Plug 'vimwiki/vimwiki'
 
-Plug 'jremmen/vim-ripgrep'
-
 " Initialize plugin system
 call plug#end()
