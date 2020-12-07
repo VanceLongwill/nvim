@@ -121,5 +121,8 @@ Plug 'mileszs/ack.vim'
 
 Plug 'vimwiki/vimwiki'
 
+" terraform syntax + commands
+Plug 'hashivim/vim-terraform'
+
 " Initialize plugin system
 call plug#end()
