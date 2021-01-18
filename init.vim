@@ -305,7 +305,8 @@ endfunction
 " Editor theme
 set background=dark
 try
-  colorscheme OceanicNext
+  colorscheme solarized8
+  " colorscheme OceanicNext
 catch
   colorscheme slate
 endtry
