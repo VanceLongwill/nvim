@@ -63,26 +63,26 @@ set shortmess+=c
 " "            (aka ignore .git files)
 " "
 " call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
-" 
+"
 " " Use ripgrep in place of "grep"
 " call denite#custom#var('grep', 'command', ['rg'])
-" 
+"
 " " Custom options for ripgrep
 " "   --vimgrep:  Show results with every match on it's own line
 " "   --hidden:   Search hidden directories and files
 " "   --heading:  Show the file name above clusters of matches from each file
 " "   --S:        Search case insensitively if the pattern is all lowercase
 " call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--heading', '-S'])
-" 
+"
 " " Recommended defaults for ripgrep via Denite docs
 " call denite#custom#var('grep', 'recursive_opts', [])
 " call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 " call denite#custom#var('grep', 'separator', ['--'])
 " call denite#custom#var('grep', 'final_opts', [])
-" 
+"
 " " Remove date from buffer list
 " call denite#custom#var('buffer', 'date_format', '')
-" 
+"
 " " Custom options for Denite
 " "   auto_resize             - Auto resize the Denite window height automatically.
 " "   prompt                  - Customize denite prompt
@@ -105,7 +105,7 @@ set shortmess+=c
 " \ 'winrow': 1,
 " \ 'vertical_preview': 1
 " \ }}
-" 
+"
 " " Loop through denite options and enable them
 " function! s:profile(opts) abort
 "   for l:fname in keys(a:opts)
@@ -114,12 +114,12 @@ set shortmess+=c
 "     endfor
 "   endfor
 " endfunction
-" 
+"
 " call s:profile(s:denite_options)
 " catch
 "   echo 'Denite not installed. It should work after running :PlugInstall'
 " endtry
-" 
+"
 " call denite#custom#map('insert', '∆', '<denite:move_to_next_line>', 'noremap')
 " call denite#custom#map('insert', '˚', '<denite:move_to_previous_line>', 'noremap')
 
@@ -254,40 +254,7 @@ function! TrailingSpaceHighlights() abort
   call matchadd('Trail', '\s\+$', 100)
 endfunction
 
-function! s:custom_jarvis_colors()
-  " coc.nvim color changes
-  hi link CocErrorSign WarningMsg
-  hi link CocWarningSign Number
-  hi link CocInfoSign Type
-
-  " Make background transparent for many things
-  hi Normal ctermbg=NONE guibg=NONE
-  hi NonText ctermbg=NONE guibg=NONE
-  hi LineNr ctermfg=NONE guibg=NONE
-  hi SignColumn ctermfg=NONE guibg=NONE
-  hi StatusLine guifg=#16252b guibg=#6699CC
-  hi StatusLineNC guifg=#16252b guibg=#16252b
-
-  " Try to hide vertical spit and end of buffer symbol
-  hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
-  hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
-
-  " Customize NERDTree directory
-  hi NERDTreeCWD guifg=#99c794
-
-  " Make background color transparent for git changes
-  hi SignifySignAdd guibg=NONE
-  hi SignifySignDelete guibg=NONE
-  hi SignifySignChange guibg=NONE
-
-  " Highlight git change signs
-  hi SignifySignAdd guifg=#99c794
-  hi SignifySignDelete guifg=#ec5f67
-  hi SignifySignChange guifg=#c594c5
-endfunction
-
 autocmd! ColorScheme * call TrailingSpaceHighlights()
-autocmd! ColorScheme OceanicNext call s:custom_jarvis_colors()
 
 " Call method on window enter
 augroup WindowManagement
@@ -304,6 +271,11 @@ endfunction
 
 " Editor theme
 set background=dark
+" let colorprofile=$ITERM_PROFILE
+" if !empty(profile)
+"   set background=colorprofile
+" endif
+
 try
   colorscheme solarized8
   " colorscheme OceanicNext
@@ -324,7 +296,7 @@ nnoremap <leader>bb :buffers<cr>:b<space>
 " nmap <C-p> :DeniteProjectDir file/rec<CR>
 " nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
 " nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
-" 
+"
 " " Define mappings while in 'filter' mode
 " "   <C-o>         - Switch to normal mode inside of search results
 " "   <Esc>         - Exit denite window in any mode
@@ -541,7 +513,7 @@ set nofoldenable
 
 source ~/.config/nvim/coc.vim
 
-nmap ; :b 
+nmap ; :b
 
 " Go
 
