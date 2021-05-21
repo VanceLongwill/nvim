@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/vance/.config/nvim'
+let g:netrw_dirhist_1='/home/vance'
+let g:netrw_dirhist_0='/home/vance/.config'
 let g:netrw_dirhist_9='/Users/vancelongwill/projects/enhance/ui'
 let g:netrw_dirhist_8='/Users/vancelongwill/projects'
 let g:netrw_dirhist_7='/Users/vancelongwill/projects/enhance'
@@ -7,5 +10,3 @@ let g:netrw_dirhist_6='/Users/vancelongwill/projects/enhance/ui'
 let g:netrw_dirhist_5='/Users/vancelongwill/.config/nvim'
 let g:netrw_dirhist_4='/Users/vancelongwill/.config/nvim/jarvis'
 let g:netrw_dirhist_3='/Users/vancelongwill/.config/nvim'
-let g:netrw_dirhist_2='/Users/vancelongwill/.config/nvim/jarvis'
-let g:netrw_dirhist_1='/Users/vancelongwill/.config/nvim'

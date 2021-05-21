@@ -15,7 +15,8 @@ set nonumber
 set noshowcmd
 
 " Yank and paste with the system clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Hides buffers instead of closing them
 set hidden
@@ -272,8 +273,8 @@ endfunction
 " Editor theme
 set background=dark
 " let colorprofile=$ITERM_PROFILE
-" if !empty(profile)
-"   set background=colorprofile
+" if !empty(colorprofile)
+"    set background=colorprofile
 " endif
 
 try
@@ -488,15 +489,18 @@ command Gunwip !git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1
 nnoremap <C-p> :FZF<CR>
 
 " Python
-let g:python_host_prog = '/Users/vancelongwill/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/vancelongwill/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
 
 " Support for comments in jsonc files
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " vim wiki use markdown
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [
+      \ {'path': '~/projects/paddle/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+      \ {'path': '~/projects/paymentsense/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+      \ {'path': '~/projects/lance/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+      \ ]
 
 " code folding
 set foldmethod=syntax
@@ -513,7 +517,7 @@ set nofoldenable
 
 source ~/.config/nvim/coc.vim
 
-nmap ; :b
+nmap ; :b<SPACE>
 
 " Go
 
@@ -524,4 +528,7 @@ let g:go_doc_keywordprg_enabled = 0
 
 " easymotion prefix space
 noremap <SPACE> <Plug>(easymotion-prefix)
-
+" https://github.com/neoclide/coc.nvim/issues/856
+if $NVM_BIN != ""
+  let g:coc_node_path = '$NVM_BIN/node'
+endif
