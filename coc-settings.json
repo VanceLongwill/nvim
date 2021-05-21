@@ -2,7 +2,7 @@
   // "list.source.files.command": "rg --files --vimgrep .",
   "tsserver.enable": true,
   "tsserver.log": "verbose",
-  "tsserver.npm": "/usr/local/bin/npm",
+  "tsserver.npm": "/home/vance/.nvm/versions/node/v14.16.1/bin/npm",
   "typescript.suggest.enabled": true,
   "typescript.validate.enable": true,
   "typescript.suggest.paths": true,

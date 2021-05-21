@@ -126,5 +126,7 @@ Plug 'vimwiki/vimwiki'
 " terraform syntax + commands
 Plug 'hashivim/vim-terraform'
 
+Plug 'tpope/vim-tbone'
+
 " Initialize plugin system
 call plug#end()
