@@ -1,5 +1,6 @@
 {
   // "list.source.files.command": "rg --files --vimgrep .",
+  "yaml.format.enable": true,
   "tsserver.enable": true,
   "tsserver.log": "verbose",
   "tsserver.npm": "/home/vance/.nvm/versions/node/v14.16.1/bin/npm",
@@ -32,12 +33,20 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".git/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".git/"
+      ],
+      "filetypes": [
+        "go"
+      ]
     },
     "terraform": {
-      "command": "terraform-lsp",
-      "filetypes": ["terraform", "tf"],
+      "command": "terraform-ls",
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
       "initializationOptions": {},
       "settings": {}
     }

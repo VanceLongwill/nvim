@@ -51,6 +51,7 @@ Plug 'marlonfan/coc-phpls'
 " Plug 'Shougo/denite.nvim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Snippet support
 " Plug 'Shougo/neosnippet'
@@ -107,7 +108,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } 
+let g:mkdp_port = '7897'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -126,7 +128,9 @@ Plug 'vimwiki/vimwiki'
 " terraform syntax + commands
 Plug 'hashivim/vim-terraform'
 
-Plug 'tpope/vim-tbone'
+" Plug 'tpope/vim-tbone'
+
+Plug 'ojroques/vim-oscyank', { 'branch': 'main' }
 
 " Initialize plugin system
 call plug#end()
