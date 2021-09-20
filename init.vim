@@ -394,7 +394,7 @@ nnoremap √ <C-w>v<C-w>l
 
 " === vim-better-whitespace === "
 "   <leader>y - Automatically remove trailing whitespace
-nmap <leader>y :StripWhitespace<CR>
+" nmap <leader>y :StripWhitespace<CR>
 
 " === Search shorcuts === "
 "   <leader>h - Find and replace
@@ -518,6 +518,9 @@ set nofoldenable
 source ~/.config/nvim/coc.vim
 
 nmap ; :b<SPACE>
+
+"vnoremap <leader>y :OSCYank<CR>
+nmap <leader>y <Plug>OSCYank
 
 " Go
 
