@@ -535,3 +535,5 @@ noremap <SPACE> <Plug>(easymotion-prefix)
 if $NVM_BIN != ""
   let g:coc_node_path = '$NVM_BIN/node'
 endif
+
+nnoremap <leader>gr :GoReferrers<CR>
