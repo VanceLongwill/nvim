@@ -71,7 +71,11 @@ try
 
 " === Vim airline ==== "
 " Enable extensions
-let g:airline_extensions = ['branch', 'hunks']
+let g:airline_extensions = ['branch', 'hunks', 'fugitiveline', 'nvimlsp']
+
+let g:airline#extensions#fugitiveline#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#nvimlsp#enabled = 1
 
 " Update section z to just have line number
 let g:airline_section_z = airline#section#create(['linenr'])
@@ -217,8 +221,7 @@ if has('persistent_undo')
   set undolevels=3000
   set undoreload=10000
 endif
-set backupdir=~/.local/share/nvim/backup " Don't put backups in current dir
-set backup
+set nobackup
 set noswapfile
 
 " Reload icons after init source
@@ -271,14 +274,43 @@ nmap ; :b<SPACE>
 vnoremap <leader>y :OSCYank<CR>
 nmap <leader>y <Plug>OSCYank
 
-" disable vim-go :GoDef short cut (gd)
-" this is handled by LSP [LC]
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
-
 " easymotion prefix space
 noremap <SPACE> <Plug>(easymotion-prefix)
 
 " Markdown preview options
 let g:mkdp_open_to_the_world = 1
 let g:mkdp_port = '9879'
+
+" cd to the directory containing the file in the buffer. Both the local
+" and global flavors.
+nmap <leader>cd :cd %:h<CR>
+nmap <leader>lcd :lcd %:h<CR>
+
+" Easymotion
+nmap <SPACE> <Plug>(easymotion-s)
+nmap <leader>j <Plug>(easymotion-bd-jk)
+nmap <leader>k <Plug>(easymotion-bd-jk)
+nmap <leader><leader>j <Plug>(easymotion-overwin-line)
+nmap <leader><leader>k <Plug>(easymotion-overwin-line)
+
+" Autocompletion
+set completeopt=menu,menuone,noselect
+
+" Telescope
+" nnoremap <C-p> <cmd>Telescope find_files<cr>
+" nnoremap <leader>Rg <cmd>Telescope live_grep<cr>
+" nnoremap <leader>fb <cmd>Telescope buffers<cr>
+
+" Gitgutter
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
+"----------------------------------------------------------------------
+" Neovim
+"----------------------------------------------------------------------
+" In neovim, we configure more things via Lua
+if has("nvim")
+    lua require("nvim-cmp")
+    lua require("settings")
+    lua require("autopairs")
+endif
