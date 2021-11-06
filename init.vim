@@ -537,3 +537,6 @@ if $NVM_BIN != ""
 endif
 
 nnoremap <leader>gr :GoReferrers<CR>
+
+let g:mkdp_open_to_the_world = 1
+let g:mkdp_port = '9879'

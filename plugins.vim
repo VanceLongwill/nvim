@@ -132,5 +132,7 @@ Plug 'hashivim/vim-terraform'
 
 Plug 'ojroques/vim-oscyank', { 'branch': 'main' }
 
+Plug 'tpope/vim-abolish'
+
 " Initialize plugin system
 call plug#end()
