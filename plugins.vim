@@ -88,4 +88,6 @@ Plug 'williamboman/nvim-lsp-installer'
 
 Plug 'windwp/nvim-autopairs'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
