@@ -84,10 +84,12 @@ Plug 'hrsh7th/vim-vsnip'
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'williamboman/nvim-lsp-installer'
+" Plug 'williamboman/nvim-lsp-installer'
 
 Plug 'windwp/nvim-autopairs'
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
 call plug#end()

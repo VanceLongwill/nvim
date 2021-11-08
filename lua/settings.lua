@@ -51,6 +51,6 @@ end
 ---------------------------------------------------------------------
 require 'nvim-treesitter.configs'.setup {
   highlight = {
-    enable = true,
+    -- enable = true,
   },
 }
