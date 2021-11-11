@@ -519,6 +519,9 @@ source ~/.config/nvim/coc.vim
 
 nmap ; :b<SPACE>
 
+" Some plugin is remapping y to y$, this prevents it
+nnoremap Y Y
+
 "vnoremap <leader>y :OSCYank<CR>
 nmap <leader>y <Plug>OSCYank
 
