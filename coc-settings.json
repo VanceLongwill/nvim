@@ -1,9 +1,10 @@
 {
+  "coc.preferences.useQuickfixForLocations": true,
   // "list.source.files.command": "rg --files --vimgrep .",
   "yaml.format.enable": true,
   "tsserver.enable": true,
   "tsserver.log": "verbose",
-  "tsserver.npm": "/home/vance/.nvm/versions/node/v14.16.1/bin/npm",
+  "tsserver.npm": "/Users/vance/.nvm/versions/node/v14.19.3/bin/node",
   "typescript.suggest.enabled": true,
   "typescript.validate.enable": true,
   "typescript.suggest.paths": true,

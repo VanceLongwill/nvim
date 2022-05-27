@@ -539,7 +539,8 @@ if $NVM_BIN != ""
   let g:coc_node_path = '$NVM_BIN/node'
 endif
 
-nnoremap <leader>gr :GoReferrers<CR>
+" nnoremap <leader>gr :GoReferrers<CR>
+" nnoremap <leader>gr <Plug>(coc-references)
 
 let g:mkdp_open_to_the_world = 1
 let g:mkdp_port = '9879'

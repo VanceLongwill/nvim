@@ -33,18 +33,18 @@ call plug#begin('~/.config/nvim/plugged')
 " Intellisense Engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc plugins
-" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-git', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'vancelongwill/import-sorter', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'marlonfan/coc-phpls'
+" Plug 'marlonfan/coc-phpls'
 
 
 " Denite - Fuzzy finding, buffer management
@@ -133,6 +133,8 @@ Plug 'hashivim/vim-terraform'
 Plug 'ojroques/vim-oscyank', { 'branch': 'main' }
 
 Plug 'tpope/vim-abolish'
+
+Plug 'lervag/vimtex'
 
 " Initialize plugin system
 call plug#end()
