@@ -34,6 +34,11 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
+      "settings": {
+        "gopls": {
+          "buildFlags": ["-tags=unit,integration"]
+        }
+      },
       "rootPatterns": [
         "go.mod",
         ".git/"
