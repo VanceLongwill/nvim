@@ -42,7 +42,7 @@ Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'vancelongwill/import-sorter', { 'do': 'yarn install --frozen-lockfile' }
 " Plug 'marlonfan/coc-phpls'
 
@@ -70,6 +70,7 @@ Plug 'cespare/vim-toml'
 " Enable git changes to be shown in sign column
 " Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " === Javascript Plugins === "
 " Typescript syntax highlighting
@@ -108,7 +109,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  } 
 let g:mkdp_port = '7897'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -135,6 +136,8 @@ Plug 'ojroques/vim-oscyank', { 'branch': 'main' }
 Plug 'tpope/vim-abolish'
 
 Plug 'lervag/vimtex'
+
+Plug 'TamaMcGlinn/quickfixdd'
 
 " Initialize plugin system
 call plug#end()
