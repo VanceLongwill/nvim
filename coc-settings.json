@@ -37,7 +37,7 @@
       "settings": {
         "gopls": {
           "buildFlags": [
-            "-tags=unit,integration"
+            "-tags=unit,integration,e2e"
           ]
         }
       },
