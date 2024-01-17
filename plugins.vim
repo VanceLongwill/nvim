@@ -29,7 +29,8 @@ Plug 'cespare/vim-toml'
 " Enable git changes to be shown in sign column
 " Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
+Plug 'lewis6991/gitsigns.nvim'
 
 " File explorer
 Plug 'scrooloose/nerdtree'
