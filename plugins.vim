@@ -90,7 +90,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'windwp/nvim-autopairs'
 
 " Plug 'github/copilot.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 call plug#end()
