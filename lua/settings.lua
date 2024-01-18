@@ -37,7 +37,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '<C-j>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', '<C-k>', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.set_loclist()<CR>', opts)
+  -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setqflist()<CR>', opts)
   vim.keymap.set('n', '<space>f', function()
     vim.lsp.buf.format { async = true }
   end, opts)
@@ -66,6 +67,17 @@ nvim_lsp.rust_analyzer.setup({
             procMacro = {
                 enable = true
             },
+            workspace = {
+              ignoredFolders = {
+                "$HOME",
+                "$HOME/.cargo/**",
+                "$HOME/.rustup/***",
+              }
+            },
+            checkOnSave = {
+              enable = true,
+              command = "clippy"
+            }
         }
     }
 })
@@ -90,14 +102,14 @@ require('gitsigns').setup {
     end
 
     -- Navigation
-    map('n', ']c', function()
-      if vim.wo.diff then return ']c' end
+    map('n', ']h', function()
+      if vim.wo.diff then return ']h' end
       vim.schedule(function() gs.next_hunk() end)
       return '<Ignore>'
     end, {expr=true})
 
-    map('n', '[c', function()
-      if vim.wo.diff then return '[c' end
+    map('n', '[h', function()
+      if vim.wo.diff then return '[h' end
       vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
     end, {expr=true})

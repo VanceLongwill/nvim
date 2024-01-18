@@ -301,10 +301,6 @@ set completeopt=menu,menuone,noselect
 " nnoremap <leader>Rg <cmd>Telescope live_grep<cr>
 " nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
-" Gitgutter
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
-
 "----------------------------------------------------------------------
 " Neovim
 "----------------------------------------------------------------------
